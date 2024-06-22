@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:well_app/Api_Teacher/teacher_main.dart';
 
+import 'package:well_app/Teacher_Api/teacher_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: TeacherMainPage   ());
+    return MaterialApp(home: TeacherMainsecond());
   }
 }

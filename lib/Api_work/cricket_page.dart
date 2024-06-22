@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:well_app/Api_work/cricket_model.dart';
 
 class CricketPage extends StatelessWidget {
-  var jsondecode;
 
   Future<Cricket?> loadCricketjson() async {
     var loadJson = await rootBundle.loadString('json_data/cricket.json');
@@ -33,11 +31,27 @@ class CricketPage extends StatelessWidget {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Card(
-                  child: ListTile(
-                    tileColor: Colors.green,
-                    title: Text('${s.data!.playername}'),
-                  ),
+                Column(
+                  children: [
+                    Card(
+                      child: ListTile(
+                        tileColor: Colors.green,
+                        title: Text('${s.data!.playername}'),
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        tileColor: Colors.green,
+                        title: Text('${s.data!.age}'),
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        tileColor: Colors.green,
+                        title: Text('${s.data!.formate}'),
+                      ),
+                    ),
+                  ],
                 )
               ],
             );

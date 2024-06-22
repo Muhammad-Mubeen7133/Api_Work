@@ -10,4 +10,5 @@ class Cricket {
         playername: cricketdata['playername'],
         age: cricketdata['age']);
   }
+  
 }

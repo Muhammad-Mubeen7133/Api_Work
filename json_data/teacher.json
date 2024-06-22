@@ -1,7 +1,9 @@
 {
-    "TeacherName":"Sir Sardar",
-    "Subject":"Mathematics",
-    "SchoolName":"Dehli Government"
-
-
+    "teacherName":"Sir Sardar",
+    "subject":["Mathematics","Physics","Flutter"],
+    "schoolName":"Dehli Government",
+    "attributes":{
+        "height":5.8,"color":"white"
+    }
+    
 }

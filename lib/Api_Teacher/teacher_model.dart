@@ -1,15 +1,34 @@
+class Attribute {
+  double? height;
+  String? color;
+  Attribute({required this.height, required this.color});
+  factory Attribute.fromJsonAttribute(Map<String, dynamic> fromAttribute) {
+    return Attribute(
+        height: fromAttribute['height'], color: fromAttribute['color']);
+  }
+}
+
 class Teacher {
   String? TeacherName;
-  String? Subject;
+  List<dynamic> Subject;
   String? SchoolNmae;
+  Attribute? attribute;
 
-  Teacher({this.TeacherName, this.Subject, this.SchoolNmae});
+  Teacher({
+    required this.TeacherName,
+    required this.Subject,
+    required this.SchoolNmae,
+    required this.attribute,
+  });
 
-  factory Teacher.teachermodelsay(Map<String,dynamic>teachmodel) {
+  factory Teacher.teachermodelsay(Map<String, dynamic> teachmodel) {
     return Teacher(
       TeacherName: teachmodel['TeacherName'],
       Subject: teachmodel['Subject'],
       SchoolNmae: teachmodel['SchoolName'],
+      attribute: Attribute.fromJsonAttribute(
+        teachmodel['Attributes'],
+      ),
     );
   }
 }
